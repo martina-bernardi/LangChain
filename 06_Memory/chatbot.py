@@ -44,6 +44,22 @@ def initialize_session_state():
     if "widget_input" not in st.session_state:
         st.session_state.widget_input = ""
 
+def initialize_session_state2():
+    if "chain" not in st.session_state:
+        st.session_state.chain = load_chain()
+
+    if "generated" not in st.session_state:
+        st.session_state.generated = []
+
+    if "past" not in st.session_state:
+        st.session_state.past = []
+
+    if "user_input" not in st.session_state:
+        st.session_state.user_input = ""
+
+    if "widget_input" not in st.session_state:
+        st.session_state.widget_input = ""
+
 
 initialize_session_state()
 
